@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>documentationjs</title>
+  <meta title='description' content=''>
+  <meta title='author' content=''>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link rel='stylesheet' href='assets/basscss.css' />
+  <link rel='stylesheet' href='assets/monokai.css' />
+  <script src='assets/highlight.pack.js'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<nav class='clearfix white bg-black'>
+  <div class='sm-col'>
+    <a href='/' class='button py2 button-transparent'>Home</a>
+    <a href='https://github.com/documentationjs/documentation' class='button py2 button-transparent'>GitHub Project</a>
+  </div>
+</nav>
+<header class='center px3 py4 white bg-blue bg-cover bg-center'>
+  <h1 class='h1 h0-responsive caps mt4 mb0 regular'>Documentation</h1>
+  <p class='h3'>A documentation system so good, you'll actually write documentation</p>
+  <iframe src='https://ghbtns.com/github-btn.html?user=documentationjs&repo=documentation&type=star&count=true&size=large' frameborder='0' scrolling='0' width='160px' height='30px'></iframe>
+</header>
+<section class='container px3 py3'>
+  <div class='clearfix mxn2'>
+    <div class='sm-col sm-col-4 px2'>
+      <h1 class='h1 h0-responsive mt4 mb0 regular'>Module Friendly</h1>
+      <p class='py2'>Traverses node &amp; CommonJS <code>require()</code>
+      calls to automatically document the code your module exposes.</p>
+    </div>
+    <div class='sm-col sm-col-4 px2'>
+      <h1 class='h1 h0-responsive mt4 mb0 regular'>Beautiful Docs</h1>
+      <p class='py2'>Stop writing documentation in Markdown. Instead,
+      write it in the standard <a href='http://usejsdoc.org/index.html'>JSDoc format</a>
+      and produce beautiful output
+      as JSON, HTML, Markdown, and Docsets from a single source.</p>
+    </div>
+    <div class='sm-col sm-col-4 px2'>
+      <h1 class='h1 h0-responsive mt4 mb0 regular'>All the Code</h1>
+      <p class='py2'>Supports popular ES6 functionality, so you can use future-JavaScript
+      and still produce great documentation. Works with client or server side
+      code, with any kind of dependency and require system.</p>
+    </div>
+  </div>
+</section>
+<div class='bg-darken-1'>
+  <div class='bg-darken-2'>
+    <section class='container px3 py1 center'>
+      <h1 class='h1 h0-responsive mt1'>Use it</h1>
+    </section>
+  </div>
+  <section class='container px3 py3'>
+    <h1 class='h1'>Node.js</h1>
+    <h4 class='h4'>Install</h4>
+    <pre class='bg-black white px1 py2'>$ npm install -g documentation</pre>
+    <h4 class='h4'>Usage</h4>
+    <pre class='bg-black white px1 py2'>$ documentation --help
+$ documentation file.js -f md > API.md</pre>
+    <h1 class='h1'>Gulp</h1>
+    <h4 class='h4'>Install</h4>
+    <pre class='bg-black white px1 py2'>$ npm install gulp-documentation</pre>
+    <h4>In your gulpfile</h4>
+<pre><code class='js'>gulp.task('documentation', function () {
+  gulp.src('./index.js')
+    .pipe(documentation({ format: 'md' }))
+    .pipe(gulp.dest('md-documentation'));
+});
+</code></pre>
+  </section>
+</div>
+</body>
+</html>
