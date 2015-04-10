@@ -7,7 +7,7 @@
   <meta title='author' content=''>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link rel='stylesheet' href='assets/basscss.css' />
-  <link rel='stylesheet' href='assets/monokai.css' />
+  <link rel='stylesheet' href='assets/color-brewer.css' />
   <script src='assets/highlight.pack.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
@@ -36,6 +36,9 @@
       write it in the standard <a href='http://usejsdoc.org/index.html'>JSDoc format</a>
       and produce beautiful output
       as JSON, HTML, Markdown, and Docsets from a single source.</p>
+      <div class='center'>
+        <a class='button mb1 black bg-darken-2' href='html-example'>HTML Output Example</a>
+      </div>
     </div>
     <div class='sm-col sm-col-4 px2'>
       <h1 class='h1 h0-responsive mt4 mb0 regular'>All the Code</h1>
@@ -45,22 +48,19 @@
     </div>
   </div>
 </section>
-<div class='bg-darken-1'>
-  <div class='bg-darken-2'>
-    <section class='container px3 py1 center'>
-      <h1 class='h1 h0-responsive mt1'>Use it</h1>
-    </section>
-  </div>
+<hr class='b2 border-blue'></hr>
+<div>
   <section class='container px3 py3'>
-    <h1 class='h1'>Node.js</h1>
+    <h1 class='h1 h0-responsive mt1'>Use It</h1>
+    <h2 class='h2'>Node.js</h2>
     <h4 class='h4'>Install</h4>
-    <pre class='bg-black white px1 py2'>$ npm install -g documentation</pre>
+    <pre class='bg-darken-1 px1 py2'>$ npm install -g documentation</pre>
     <h4 class='h4'>Usage</h4>
-    <pre class='bg-black white px1 py2'>$ documentation --help
+    <pre class='bg-darken-1 px1 py2'>$ documentation --help
 $ documentation file.js -f md > API.md</pre>
-    <h1 class='h1'>Gulp</h1>
+    <h2 class='h2'>Gulp</h2>
     <h4 class='h4'>Install</h4>
-    <pre class='bg-black white px1 py2'>$ npm install gulp-documentation</pre>
+    <pre class='bg-darken-1 px1 py2'>$ npm install gulp-documentation</pre>
     <h4>In your gulpfile</h4>
 <pre><code class='js'>gulp.task('documentation', function () {
   gulp.src('./index.js')
