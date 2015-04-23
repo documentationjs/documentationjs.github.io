@@ -50,26 +50,53 @@
     </div>
   </div>
 </section>
-<hr class='b2 border-blue'></hr>
+<hr class='b2 border-blue' />
 <div>
   <section class='container px3 py3' id='install'>
     <h1 class='h1 h0-responsive mt1'>Use It</h1>
-    <h2 class='h2'>Node.js</h2>
-    <h4 class='h4'>Install</h4>
-    <pre class='bg-darken-1 px1 py2'>$ npm install -g documentation</pre>
-    <h4 class='h4'>Usage</h4>
-    <pre class='bg-darken-1 px1 py2'>$ documentation --help
+    <div class='py2'>
+        <h2 class='h2'>Writing Documentation</h2>
+        <div class='clearfix mxn2'>
+        <div class='sm-col-6 sm-col px2'>
+            <p class='py2'>Documentation has a first-class environment for <em>writing new documentation</em>,
+            so that you can live-preview generated documentation as you edit
+            the code's JSDoc comments. This is called <a href='https://github.com/documentationjs/dev-documentation'>dev-docmentation</a>.
+            To install it, you'll need <a href='https://nodejs.org/'>node.js</a>.</p>
+            <pre class='bg-darken-1 px1 py2'>$ npm install -g dev-documentation</pre>
+            <p>Then just run the command <code>dev-documentation</code> with no arguments to
+            document everything in the current directory, or with a specific filename
+            to document just one file.</p>
+            <pre class='bg-darken-1 px1 py2'>$ cd my-project
+$ dev-documentation</pre>
+        </div>
+        <div class='sm-col-6 sm-col'>
+            <img src='http://i.imgur.com/I0VFaha.gif' title='Demo of dev-documentation' />
+        </div>
+        </div>
+    </div>
+    <div class='py2'>
+        <h2 class='h2'>Node.js</h2>
+        <h4 class='h4'>Install</h4>
+        <pre class='bg-darken-1 px1 py2'>$ npm install -g documentation</pre>
+        <h4 class='h4'>Usage</h4>
+        <pre class='bg-darken-1 px1 py2'>$ documentation --help
 $ documentation file.js -f md > API.md</pre>
-    <h2 class='h2'>Gulp</h2>
-    <h4 class='h4'>Install</h4>
-    <pre class='bg-darken-1 px1 py2'>$ npm install gulp-documentation</pre>
-    <h4>In your gulpfile</h4>
-<pre><code class='js'>gulp.task('documentation', function () {
+        <p>The documentation module also has a great <a href='https://github.com/documentationjs/documentation'>node-facing API</a>.<p>
+    </div>
+    <div class='py2'>
+        <h2 class='h2'>Gulp</h2>
+        <h4 class='h4'>Install</h4>
+        <pre class='bg-darken-1 px1 py2'>$ npm install gulp-documentation</pre>
+        <h4>In your gulpfile</h4>
+    <pre><code class='js'>var gulp = require('gulp');
+var documentation = require('gulp-documentation');
+gulp.task('documentation', function () {
   gulp.src('./index.js')
     .pipe(documentation({ format: 'md' }))
     .pipe(gulp.dest('md-documentation'));
 });
 </code></pre>
+    </div>
   </section>
 </div>
 </body>
