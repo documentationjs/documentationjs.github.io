@@ -10,94 +10,113 @@
   <link rel='stylesheet' href='assets/color-brewer.css' />
   <script src='assets/highlight.pack.js'></script>
   <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+  body {
+    font-family: Georgia, Times New Roman, serif;
+    font-size:18px;
+  }
+  .bg-lightblue {
+    background-color: #E4F1FE
+  }
+  .py8 { padding-top: 8rem; padding-bottom: 8rem }
+  </style>
 </head>
 <body>
-<nav class='clearfix white bg-black'>
-  <div class='sm-col'>
-    <a href='/' class='button py2 button-transparent'>Home</a>
-    <a href='#install' class='button py2 button-transparent'>Install</a>
-    <a href='https://github.com/documentationjs/documentation/blob/master/GETTTING_STARTED.md' class='button py2 button-transparent'>How to Write Docs</a>
-    <a href='https://github.com/documentationjs/documentation' class='button py2 button-transparent'>GitHub Project</a>
-  </div>
+<nav class='clearfix bg-lightblue py2 px2 right'>
+  <span style='position:relative;top:8px;'>
+    <iframe src='https://ghbtns.com/github-btn.html?user=documentationjs&repo=documentation&type=star&count=true&size=large' frameborder='0' scrolling='0' width='160px' height='30px'></iframe>
+  </span>
+  <a class='px2 h3' href='https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md' class='button py2 button-transparent'>Guide</a>
+  <a class='px2 h3' href='https://github.com/documentationjs/documentation' class='button py2 button-transparent'>GitHub</a>
 </nav>
-<header class='center px3 py4 white bg-blue bg-cover bg-center'>
-  <h1 class='h1 h0-responsive caps mt4 mb0 regular'>Documentation</h1>
-  <p class='h3'>A documentation system so good, you'll actually write documentation</p>
-  <iframe src='https://ghbtns.com/github-btn.html?user=documentationjs&repo=documentation&type=star&count=true&size=large' frameborder='0' scrolling='0' width='160px' height='30px'></iframe>
+<header class='center px3 py8 bg-lightblue bg-cover bg-center border-bottom'>
+  <img style='max-width:672px;width:100%;' src='documentationjs@2x.png' />
+  <p class='italic'>a documentation system so good, you'll actually write documentation</p>
 </header>
-<section class='container px3 py3'>
-  <div class='clearfix mxn2'>
-    <div class='sm-col sm-col-4 px2'>
-      <h1 class='h1 h0-responsive mt4 mb0 regular'>Module Friendly</h1>
-      <p class='py2'>Traverses node &amp; CommonJS <code>require()</code>
-      calls to automatically document the code your module exposes.</p>
-    </div>
-    <div class='sm-col sm-col-4 px2'>
-      <h1 class='h1 h0-responsive mt4 mb0 regular'>Beautiful Docs</h1>
-      <p class='py2'>Stop writing documentation in Markdown. Instead,
-      write it in the standard <a href='http://usejsdoc.org/index.html'>JSDoc format</a>
-      and produce beautiful output
-      as JSON, HTML, Markdown, and Docsets from a single source.</p>
-      <div class='center'>
-        <a class='button mb1 black bg-darken-2' href='html-example'>HTML Output Example</a>
-      </div>
-    </div>
-    <div class='sm-col sm-col-4 px2'>
-      <h1 class='h1 h0-responsive mt4 mb0 regular'>All the Code</h1>
-      <p class='py2'>Supports popular ES6 functionality, so you can use future-JavaScript
-      and still produce great documentation. Works with client or server side
-      code, with any kind of dependency and require system. With the <strong>polyglot</strong>
-      option, you can even document C++ code - it's awesome for native nodejs modules.</p>
-    </div>
+<section class='container'>
+
+<div class='px2'>
+  <div class='h2 mt4 mb0'>
+    <span class='caps bold'>
+      Output
+    </span>
+    <span>
+      HTML +
+      Markdown +
+      JSON
+    </span>
   </div>
+  <p class='py2'>
+    documentation.js has pluggable output formats: you can get raw
+    documentation as JSON, beautiful, customizable HTML, or Markdown
+    that fits perfectly into an API.md or README.md file in a Github
+    repository
+  </p>
+</div>
+
+<div class='px2'>
+  <div class='h2 mt4 mb0'>
+    <span class='caps bold'>
+      Universal
+    </span>
+    <span>
+      JavaScript +
+      ES6 Syntax +
+      CommonJS +
+      C/C++
+    </span>
+  </div>
+  <p class='py2'>
+    documentation.js aims to cover all flavors of modern JavaScript:
+    everything from client-side libraries to native node.js modules
+    with logic in C++.
+  </p>
+</div>
+
+<div class='px2'>
+  <div class='h2 mt4 mb0'>
+    <span class='caps bold'>
+      Integrated
+    </span>
+    <span>
+      <a href='https://github.com/documentationjs/documentation#user-guide'>CLI</a>
+      + Node.js</li>
+      + <a href='https://github.com/documentationjs/gulp-documentation'>Gulp</a>
+      + <a href='https://github.com/documentationjs/dev-documentation'>Developer Tools</a>
+    </span>
+  </div>
+  <p class='py2'>
+    documentation.js works in your workflow, whether you just want a command-line
+    utility that generates documentation from your code,
+    you use Gulp to publish websites, or you're building
+    a new system and want low-level JavaScript methods.
+  </p>
+</div>
 </section>
-<hr class='b2 border-blue' />
-<div>
-  <section class='container px3 py3' id='install'>
-    <h1 class='h1 h0-responsive mt1'>Use It</h1>
-    <div class='py2'>
-        <h2 class='h2'>Writing Documentation</h2>
-        <div class='clearfix mxn2'>
-        <div class='sm-col-6 sm-col px2'>
-            <p class='py2'>Documentation has a first-class environment for <em>writing new documentation</em>,
-            so that you can live-preview generated documentation as you edit
-            the code's JSDoc comments. This is called <a href='https://github.com/documentationjs/dev-documentation'>dev-docmentation</a>.
-            To install it, you'll need <a href='https://nodejs.org/'>node.js</a>.</p>
-            <pre class='bg-darken-1 px1 py2'>$ npm install -g dev-documentation</pre>
-            <p>Then just run the command <code>dev-documentation</code> with no arguments to
-            document everything in the current directory, or with a specific filename
-            to document just one file.</p>
-            <pre class='bg-darken-1 px1 py2'>$ cd my-project
-$ dev-documentation</pre>
-        </div>
-        <div class='sm-col-6 sm-col'>
-            <img src='http://i.imgur.com/I0VFaha.gif' title='Demo of dev-documentation' />
-        </div>
-        </div>
+
+<div class='bg-lightblue py2 px2 border-top mt4'>
+  <section class='container'>
+    <div class='px2 mb4'>
+      <div class='h2 mt4 mb0'>
+        <span class='caps bold'>
+          Get started
+        </span>
+      </div>
+      <p class='py2'>
+      <a
+        class='btn btn-primary mb1 mt1 bg-navy white'
+        href='https://github.com/documentationjs/documentation/blob/master/docs/GETTING_STARTED.md'>
+        Start using documentation.js to write documentation.
+      </a>
+      </p>
     </div>
-    <div class='py2'>
-        <h2 class='h2'>Node.js</h2>
-        <h4 class='h4'>Install</h4>
-        <pre class='bg-darken-1 px1 py2'>$ npm install -g documentation</pre>
-        <h4 class='h4'>Usage</h4>
-        <pre class='bg-darken-1 px1 py2'>$ documentation --help
-$ documentation file.js -f md > API.md</pre>
-        <p>The documentation module also has a great <a href='https://github.com/documentationjs/documentation'>node-facing API</a>.<p>
-    </div>
-    <div class='py2'>
-        <h2 class='h2'>Gulp</h2>
-        <h4 class='h4'>Install</h4>
-        <pre class='bg-darken-1 px1 py2'>$ npm install gulp-documentation</pre>
-        <h4>In your gulpfile</h4>
-    <pre><code class='js'>var gulp = require('gulp');
-var documentation = require('gulp-documentation');
-gulp.task('documentation', function () {
-  gulp.src('./index.js')
-    .pipe(documentation({ format: 'md' }))
-    .pipe(gulp.dest('md-documentation'));
-});
-</code></pre>
-    </div>
+  </section>
+  <section class='container center muted'>
+    <a href='https://github.com/documentationjs/documentation'>
+      <img style='vertical-align:middle;max-width:168px;width:100%;' src='documentationjs@2x.png' />
+    </a>
+    created by <a href='https://github.com/documentationjs/documentation/graphs/contributors'>wonderful people</a>,
+    distributed under the <a href='https://github.com/documentationjs/documentation/blob/master/LICENSE'>ISC license</a>.
   </section>
 </div>
 </body>
